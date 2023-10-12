@@ -1,2 +1,70 @@
 @import "normalize.css";
-@import "reset.css";/*# sourceMappingURL=styles.css.map */
+@import "reset.css";
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap");
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+}
+
+header {
+  padding: 20px;
+  background-color: #333;
+  color: whitesmoke;
+  height: 100px;
+}
+header h1 {
+  font-size: 3rem;
+}
+
+main {
+  padding: 20px;
+  min-height: calc(100vh - 100px - 80px);
+}
+main #books-sect {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+main #books-sect .card {
+  background-color: whitesmoke;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 0px rgba(51, 51, 51, 0.6);
+}
+main #books-sect .card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+main #books-sect .card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+main #books-sect .card div {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: whitesmoke;
+  padding: 20px;
+  height: 80px;
+}
+footer svg {
+  width: 30px;
+  margin-left: 20px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  filter: invert(100);
+}
+footer svg:hover {
+  transform: rotate(360deg) scale(1.1);
+}/*# sourceMappingURL=styles.css.map */

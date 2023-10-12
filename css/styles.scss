@@ -1,2 +1,89 @@
 @import "normalize.css", "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300&display=swap');
+
+$white: whitesmoke;
+$black: #333;
+
+$transition: all 0.2s ease;
+$padding: 20px;
+$radius: 10px;
+$shadow: 3px 3px 3px 0px rgba(51, 51, 51, 0.6);
+
+$header-height: 100px;
+$footer-height: 80px;
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+}
+
+header {
+    padding: $padding;
+    background-color: $black;
+    color: $white;
+    height: $header-height;
+
+    h1 {
+        font-size: 3rem;
+    }
+}
+
+main {
+    padding: $padding;
+    min-height: calc(100vh - $header-height - $footer-height);
+
+    #books-sect {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: $padding;
+
+        .card {
+            background-color: $white;
+            color: $black;
+            padding: $padding;
+            border-radius: $radius;
+            box-shadow: $shadow;
+
+            h2 {
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 1.2rem;
+                margin-bottom: 10px;
+            }
+
+            div {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+    color: $white;
+    padding: $padding;
+    height: $footer-height;
+
+    svg {
+        width: 30px;
+        margin-left: 20px;
+        transition: $transition;
+        cursor: pointer;
+        filter: invert(100);
+
+        &:hover {
+            transform: rotate(360deg) scale(1.1);
+        }
+    }
+}
 
