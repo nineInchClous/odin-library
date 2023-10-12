@@ -15,9 +15,25 @@ header {
   background-color: #333;
   color: whitesmoke;
   height: 100px;
+  display: flex;
+  justify-content: space-between;
 }
 header h1 {
   font-size: 3rem;
+}
+header button {
+  padding: 20px;
+  background-color: whitesmoke;
+  border: 1px solid transparent;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+header button:hover {
+  background-color: #333;
+  color: whitesmoke;
+  border-color: whitesmoke;
 }
 
 main {
@@ -47,6 +63,65 @@ main #books-sect .card h3 {
 main #books-sect .card div {
   display: flex;
   justify-content: space-between;
+}
+main dialog {
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid #333;
+  box-shadow: 3px 3px 3px 0px rgba(51, 51, 51, 0.6);
+  padding: 20px 60px;
+  width: clamp(300px, 70%, 600px);
+}
+main dialog::backdrop {
+  background-color: rgba(250, 250, 250, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+main dialog form label {
+  margin: 10px 0;
+  display: inline-block;
+  opacity: 0.6;
+  font-weight: 400;
+}
+main dialog form input[type=text], main dialog form input[type=number] {
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: whitesmoke;
+  padding: 10px;
+}
+main dialog form input {
+  margin-bottom: 20px;
+}
+main dialog form .input-container {
+  display: flex;
+  flex-direction: column;
+}
+main dialog form .btn-container {
+  display: flex;
+  justify-content: flex-end;
+}
+main dialog form button {
+  background-color: #333;
+  border: 1px solid transparent;
+  outline: none;
+  color: whitesmoke;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+}
+main dialog form button:hover {
+  background-color: whitesmoke;
+  border-color: #333;
+  color: #333;
+}
+main dialog form button[type=button] {
+  padding: 5px 10px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 footer {
