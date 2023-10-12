@@ -43,6 +43,7 @@ main #books-sect .card {
 }
 main #books-sect .card h2 {
   font-size: 1.5rem;
+  text-transform: capitalize;
 }
 main #books-sect .card h3 {
   font-size: 1.2rem;
