@@ -59,6 +59,7 @@ main #books-sect .card h2 {
 main #books-sect .card h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
+  text-transform: uppercase;
 }
 main #books-sect .card div {
   display: flex;
