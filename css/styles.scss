@@ -35,18 +35,6 @@ header {
 
     button {
         padding: $padding;
-        background-color: $white;
-        border: 1px solid transparent;
-        color: $black;
-        border-radius: $radius;
-        cursor: pointer;
-        transition: $transition;
-
-        &:hover {
-            background-color: $black;
-            color: $white;
-            border-color: $white;
-        }
     }
 }
 
@@ -68,17 +56,32 @@ main {
 
             h2 {
                 font-size: 1.5rem;
-                margin-bottom: 20px;
             }
             h3 {
                 font-size: 1.2rem;
-                margin-bottom: 10px;
+                margin-bottom: 5px;
                 text-transform: uppercase;
             }
+
+            button {
+                padding: 10px;
+                font-weight: 200;
+                font-size: 0.9rem;
+            }
+
+            
 
             div {
                 display: flex;
                 justify-content: space-between;
+                align-items: center;
+
+                &:first-of-type {
+                    margin-bottom: 20px;
+                }
+                &:last-of-type {
+                    margin-top: 20px;
+                }
             }
         }
     }
@@ -118,26 +121,8 @@ main {
                 display: flex;
                 flex-direction: column;
             }
-            .btn-container {
-                display: flex;
-                justify-content: flex-end;
-            }
             button {
-                background-color: $black;
-                border: 1px solid transparent;
-                outline: none;
-                color: $white;
                 padding: 10px;
-                border-radius: $radius;
-                cursor: pointer;
-                transition: $transition;
-                display: block;
-
-                &:hover {
-                    background-color: $white;
-                    border-color: $black;
-                    color: $black;
-                }
             }
             button[type=button] {
                 padding: 5px 10px;
@@ -168,4 +153,39 @@ footer {
             transform: rotate(360deg) scale(1.1);
         }
     }
+}
+
+.light-btn {
+    background-color: $white;
+    border: 1px solid transparent;
+    color: $black;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+        border-color: $white;
+    }
+}
+.dark-btn {
+    background-color: $black;
+    border: 1px solid transparent;
+    outline: none;
+    color: $white;
+    border-radius: $radius;
+    cursor: pointer;
+    transition: $transition;
+    display: block;
+
+    &:hover {
+        background-color: $white;
+        border-color: $black;
+        color: $black;
+    }
+}
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
 }

@@ -23,17 +23,6 @@ header h1 {
 }
 header button {
   padding: 20px;
-  background-color: whitesmoke;
-  border: 1px solid transparent;
-  color: #333;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-header button:hover {
-  background-color: #333;
-  color: whitesmoke;
-  border-color: whitesmoke;
 }
 
 main {
@@ -54,16 +43,27 @@ main #books-sect .card {
 }
 main #books-sect .card h2 {
   font-size: 1.5rem;
-  margin-bottom: 20px;
 }
 main #books-sect .card h3 {
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   text-transform: uppercase;
+}
+main #books-sect .card button {
+  padding: 10px;
+  font-weight: 200;
+  font-size: 0.9rem;
 }
 main #books-sect .card div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+main #books-sect .card div:first-of-type {
+  margin-bottom: 20px;
+}
+main #books-sect .card div:last-of-type {
+  margin-top: 20px;
 }
 main dialog {
   background-color: white;
@@ -99,25 +99,8 @@ main dialog form .input-container {
   display: flex;
   flex-direction: column;
 }
-main dialog form .btn-container {
-  display: flex;
-  justify-content: flex-end;
-}
 main dialog form button {
-  background-color: #333;
-  border: 1px solid transparent;
-  outline: none;
-  color: whitesmoke;
   padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  display: block;
-}
-main dialog form button:hover {
-  background-color: whitesmoke;
-  border-color: #333;
-  color: #333;
 }
 main dialog form button[type=button] {
   padding: 5px 10px;
@@ -143,4 +126,39 @@ footer svg {
 }
 footer svg:hover {
   transform: rotate(360deg) scale(1.1);
+}
+
+.light-btn {
+  background-color: whitesmoke;
+  border: 1px solid transparent;
+  color: #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.light-btn:hover {
+  background-color: #333;
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+
+.dark-btn {
+  background-color: #333;
+  border: 1px solid transparent;
+  outline: none;
+  color: whitesmoke;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block;
+}
+.dark-btn:hover {
+  background-color: whitesmoke;
+  border-color: #333;
+  color: #333;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: flex-end;
 }/*# sourceMappingURL=styles.css.map */
